@@ -8,8 +8,8 @@ We host over **827,600 mods** for thousands of games from over **135,000 authors
 
 | Repository | Description |
 |---|---|
-| [Vortex](https://github.com/Nexus-Mods/Vortex) | Our open-source mod manager — automates load order sorting, mod file management, and deployment so you spend less time modding and more time playing |
-| [Vortex API](https://github.com/Nexus-Mods/vortex-api) | Type definitions, API docs, and examples for building Vortex extensions |
+| [Vortex](https://github.com/Nexus-Mods/Vortex) | Our open-source mod manager. It automates load order sorting, mod file management and deployment, so you spend less time modding and more time playing |
+| [Vortex API](https://github.com/Nexus-Mods/Vortex/tree/master/packages/vortex-api) | Type definitions and API docs for building Vortex extensions, published to npm as [`@nexusmods/vortex-api`](https://www.npmjs.com/package/@nexusmods/vortex-api) |
 | [Nexus Mods API](https://api-docs.nexusmods.com/) | Our public API for integrating with Nexus Mods (v3) |
 
 ### Vortex
@@ -19,17 +19,23 @@ Vortex is the mod manager from Nexus Mods. It is designed to make modding your g
 Our approach with Vortex aims to take complex tasks such as sorting your load order or managing your mod files and automates as much of the process as possible with the goal of having you achieve a stable modded game with minimal effort. We want to help you spend less time modding and more time playing your games.
 
 - [Vortex Repo (GitHub)](https://github.com/Nexus-Mods/Vortex)
-- [Download Vortex (Nexus Mods)](https://www.nexusmods.com/about/vortex/)
+- [Download Vortex (Nexus Mods)](https://www.nexusmods.com/vortex)
 - [Vortex Forum (Nexus Mods)](https://forums.nexusmods.com/index.php?/forum/4306-vortex-support/)
 - [Vortex Wiki (GitHub)](https://github.com/Nexus-Mods/Vortex/wiki)
 
 ### Vortex Extension Development
 
-The [vortex-api](https://github.com/Nexus-Mods/vortex-api) repository contains the type definitions and API interface for building Vortex extensions. Extensions can register game support, add UI pages, create custom mod installers, and implement load order management.
+The extension API lives in the Vortex repo under [`packages/vortex-api`](https://github.com/Nexus-Mods/Vortex/tree/master/packages/vortex-api) and is published to npm as [`@nexusmods/vortex-api`](https://www.npmjs.com/package/@nexusmods/vortex-api). Extensions can register game support, add UI pages, create custom mod installers, and implement load order management.
 
-- [Vortex API Repo (GitHub)](https://github.com/Nexus-Mods/vortex-api)
-- [API Changelog](https://github.com/Nexus-Mods/vortex-api/blob/master/CHANGELOG.md)
-- [Example Extensions](https://github.com/Nexus-Mods/vortex-api/tree/master/docs/examples)
+The old [vortex-api](https://github.com/Nexus-Mods/vortex-api) repository is archived and no longer updated. Existing extensions that depend on it keep working, but new work should use the npm package.
+
+- [Vortex API package (GitHub)](https://github.com/Nexus-Mods/Vortex/tree/master/packages/vortex-api)
+- [`@nexusmods/vortex-api` (npm)](https://www.npmjs.com/package/@nexusmods/vortex-api)
+- [Migrating from the old vortex-api repo](https://github.com/Nexus-Mods/Vortex/blob/master/packages/vortex-api/docs/MIGRATION.md)
+- [API Changelog](https://github.com/Nexus-Mods/Vortex/blob/master/packages/vortex-api/CHANGELOG.md)
+- [Events Reference](https://github.com/Nexus-Mods/Vortex/blob/master/packages/vortex-api/docs/EVENTS.md)
+- [Example Extensions](https://github.com/Nexus-Mods/Vortex/blob/master/packages/vortex-api/docs/EXAMPLES.md)
+- [How to develop a game extension (Wiki)](https://github.com/Nexus-Mods/Vortex/wiki/How-to-develop-a-game-extension)
 
 ### Nexus Mods API
 
@@ -40,7 +46,7 @@ Build tools and integrations with the Nexus Mods API. The v3 API is the current 
 
 ### Get Involved
 
-- **Report bugs or request features** — Use the Issues tab on the relevant repository
-- **Build a Vortex extension** — Start with the [vortex-api](https://github.com/Nexus-Mods/vortex-api) docs and examples
-- **Join the community** — [Nexus Mods Forums](https://forums.nexusmods.com/) · [Discord](https://discord.gg/nexusmods)
-- **Upload your mods** — [Start sharing on Nexus Mods](https://www.nexusmods.com/)
+- **Report bugs or request features:** use the Issues tab on the relevant repository
+- **Build a Vortex extension:** start with the [Vortex API](https://github.com/Nexus-Mods/Vortex/tree/master/packages/vortex-api) docs and the [extension wiki](https://github.com/Nexus-Mods/Vortex/wiki/How-to-develop-a-game-extension)
+- **Join the community:** [Nexus Mods Forums](https://forums.nexusmods.com/) · [Discord](https://discord.gg/nexusmods)
+- **Upload your mods:** [Start sharing on Nexus Mods](https://www.nexusmods.com/)
